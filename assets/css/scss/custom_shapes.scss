@@ -1,0 +1,134 @@
+@import "colors";
+/* ------------------------------------------------ CUSTOM SHAPES ----------------------------------------------------*/
+// orientation: "bottom" (default) or "top"
+@mixin poly-divider($height: 80px, $base-color: #e26a08, $accent-alpha: 0.25, $orientation: bottom) {
+    position: relative;
+    background-color: $base-color;
+  
+    // base styles shared by before/after
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: $height;
+      pointer-events: none;
+    }
+  
+    // anchor + flip depending on orientation
+    @if $orientation == bottom {
+      &::before,
+      &::after {
+        bottom: -1px;
+        top: auto;
+        transform: none;
+      }
+    } @else if $orientation == top {
+      &::before,
+      &::after {
+        top: 4px;
+        bottom: auto;
+        transform: scaleY(-1);
+        transform-origin: 50% 0; // flip around the top edge
+      }
+    }
+  
+    // darker layer (disegnato dopo, quindi sopra)
+    &::after {
+        background-color: rgba($base-color, $accent-alpha);
+        //coordinate di punti x,y
+        clip-path: polygon(
+        0%  60%,
+        6%   70%,
+        12%  50%,
+        24%  64%,
+        32%  40%,
+        42%  64%,
+        52%  36%,
+        68%  80%,
+        88%  44%,
+        100% 60%,
+        100% 100%,
+        0%   100%
+        );
+    }
+
+    // lighter layer (sotto all'altro)
+    &::before {
+        background-color: rgba($base-color, $accent-alpha * 0.7);
+        //coordinate di punti x,y
+        clip-path: polygon(
+        0%   80%,
+        6%   56%,
+        14%  60%,
+        20%  40%,
+        30%  60%,
+        42%  44%,
+        50%  74%,
+        60%  50%,
+        66%  58%,
+        74%  32%,
+        82%  66%,
+        94%  38%,
+        100% 70%,
+        100% 100%,
+        0%   100%
+        );
+    }
+}
+.poly-bottom-dark {
+    @include poly-divider(60px, $bs-black-0x241d18, 1, bottom);
+}
+
+// divider speculare in alto
+.poly-top-dark {
+    @include poly-divider(80px, $bs-black-0x241d18, 1, top);
+}
+
+.poly-bottom-orange {
+    @include poly-divider(60px,  $secondary, 1, bottom);
+}
+
+// divider speculare in alto
+.poly-top-orange {
+    @include poly-divider(80px,  $secondary, 1, top);
+} 
+
+/*-------------------------------------CIRCLE AND TIMELINE---------------------------------*/
+
+/* Linea verticale a sinistra */
+.timeline::before {
+  position: absolute;
+  content: ""; 
+  top: -0.5rem;
+  bottom: 0;
+  left: 2rem;           /* distanza dal bordo sinistro */
+  width: 0.25rem;
+  background: $secondary;     /*colore linea */
+  opacity: 0.5;
+}
+
+/* Dot sulla linea, allineato alla data */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 1rem;           /* deve “centrarsi” sulla linea */
+  top: 0.4rem;            /* altezza rispetto alla data */
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: $secondary;    /* colore interno del dot */
+  box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px $secondary, 2px 2px 5px 5px $secondary; /* bordino bianco + anello + shadow */
+}
+  
+/* Colonna data (a sinistra del testo, ma a destra del dot) */
+.timeline-date {
+  min-width: 90px;
+  font-weight: 600;
+  color: $secondary;
+}
+
+
+
+

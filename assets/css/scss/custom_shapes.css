@@ -1,0 +1,188 @@
+@charset "UTF-8";
+:root {
+  /* PRIMARY: */
+  --bs-primary: #ffffff;
+  --bs-primary-rgb: 255, 255, 255;
+  /* SECONDARY: */
+  --bs-secondary: #e26a08;
+  --bs-secondary-rgb: 226, 106, 8;
+  --bs-gray-900-rgb: 33, 37, 41;
+}
+
+/* ------------------------------------------------ CUSTOM SHAPES ----------------------------------------------------*/
+.poly-bottom-dark {
+  position: relative;
+  background-color: #241d18;
+}
+
+.poly-bottom-dark::before, .poly-bottom-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+}
+
+.poly-bottom-dark::before, .poly-bottom-dark::after {
+  bottom: -1px;
+  top: auto;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.poly-bottom-dark::after {
+  background-color: #241d18;
+  -webkit-clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.poly-bottom-dark::before {
+  background-color: rgba(36, 29, 24, 0.7);
+  -webkit-clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+.poly-top-dark {
+  position: relative;
+  background-color: #241d18;
+}
+
+.poly-top-dark::before, .poly-top-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+}
+
+.poly-top-dark::before, .poly-top-dark::after {
+  top: 4px;
+  bottom: auto;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+.poly-top-dark::after {
+  background-color: #241d18;
+  -webkit-clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.poly-top-dark::before {
+  background-color: rgba(36, 29, 24, 0.7);
+  -webkit-clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+.poly-bottom-orange {
+  position: relative;
+  background-color: #e26a08;
+}
+
+.poly-bottom-orange::before, .poly-bottom-orange::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+}
+
+.poly-bottom-orange::before, .poly-bottom-orange::after {
+  bottom: -1px;
+  top: auto;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.poly-bottom-orange::after {
+  background-color: #e26a08;
+  -webkit-clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.poly-bottom-orange::before {
+  background-color: rgba(226, 106, 8, 0.7);
+  -webkit-clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+.poly-top-orange {
+  position: relative;
+  background-color: #e26a08;
+}
+
+.poly-top-orange::before, .poly-top-orange::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  pointer-events: none;
+}
+
+.poly-top-orange::before, .poly-top-orange::after {
+  top: 4px;
+  bottom: auto;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+}
+
+.poly-top-orange::after {
+  background-color: #e26a08;
+  -webkit-clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 60%, 6% 70%, 12% 50%, 24% 64%, 32% 40%, 42% 64%, 52% 36%, 68% 80%, 88% 44%, 100% 60%, 100% 100%, 0% 100%);
+}
+
+.poly-top-orange::before {
+  background-color: rgba(226, 106, 8, 0.7);
+  -webkit-clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 80%, 6% 56%, 14% 60%, 20% 40%, 30% 60%, 42% 44%, 50% 74%, 60% 50%, 66% 58%, 74% 32%, 82% 66%, 94% 38%, 100% 70%, 100% 100%, 0% 100%);
+}
+
+/*-------------------------------------CIRCLE AND TIMELINE---------------------------------*/
+/* Linea verticale a sinistra */
+.timeline::before {
+  position: absolute;
+  content: "";
+  top: -0.5rem;
+  bottom: 0;
+  left: 2rem;
+  /* distanza dal bordo sinistro */
+  width: 0.25rem;
+  background: #e26a08;
+  /*colore linea */
+  opacity: 0.5;
+}
+
+/* Dot sulla linea, allineato alla data */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  /* deve “centrarsi” sulla linea */
+  top: 0.4rem;
+  /* altezza rispetto alla data */
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #e26a08;
+  /* colore interno del dot */
+  -webkit-box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #e26a08, 2px 2px 5px 5px #e26a08;
+          box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 5px #e26a08, 2px 2px 5px 5px #e26a08;
+  /* bordino bianco + anello + shadow */
+}
+
+/* Colonna data (a sinistra del testo, ma a destra del dot) */
+.timeline-date {
+  min-width: 90px;
+  font-weight: 600;
+  color: #e26a08;
+}
+/*# sourceMappingURL=custom_shapes.css.map */
