@@ -1,0 +1,255 @@
+@import "colors";
+/*----------------------------------------------------------- ANIMATIONS ----------------------------------------------------*/
+
+.text-hover-slide {
+    transition: transform 1.6s ease, letter-spacing 1.6s ease;
+}
+  
+.text-hover-slide:hover {
+    transform: translateX(0.35rem) scaleX(1.2) scaleY(1.2);
+    letter-spacing: 0.4em;
+}
+
+
+$slide-l-start-main-img: -500px;
+$slide-l-start-h1: -200px;
+$slide-duration: 1s;
+@mixin anim-slide-in($x: 0, $y: 0, $duration: 1s) {
+    /* Animazione: l'immagine parte da dx o sx e fa uno slide in posizione */ 
+    opacity: 0;
+    //created a custom property --start-x
+    --start-x: #{$x};
+    --start-y: #{$y};
+    animation: slideXY $duration ease-out forwards;
+}
+  
+.slide-l-h1 {
+    @include anim-slide-in($slide-l-start-h1, 0, $slide-duration);
+}
+.slide-l-img {
+    @include anim-slide-in($slide-l-start-main-img, 0, $slide-duration);
+}
+
+//keyframes can't take input parameters but can read parameters from a call
+@keyframes slideXY {
+    from {
+    opacity: 0;
+    transform: translate(var(--start-x, 0), var(--start-y, 0));
+    }
+    to {
+    opacity: 1;
+    transform: translate(0, 0);
+    } 
+}
+
+
+// Parametri personalizzabili per la sfera
+$nav-spot-size: 2.5rem;     // diametro dello spotlight
+$nav-spot-offset: 0.6rem;   // quanto sotto alla nav si trova
+$nav-spot-duration: 2s;
+$nav-sphere-width:100%;
+$nav-color: $secondary;
+$nav-keyframe: nav-light-spot-move;
+$nav-position: absolute;
+
+// Mixin per "pallina" di luce sotto la nav
+@mixin sliding-light-spot(
+    $size: $nav-spot-size,
+    $offset-y: $nav-spot-offset,
+    $duration: $nav-spot-duration,
+    $sphere-width: $nav-sphere-width,
+    $color: $nav-color,
+    $keyframe-type: $nav-keyframe
+) {
+// non tocchiamo position della navbar!
+&::after {
+    content: "";
+    position: absolute;
+    bottom: -$offset-y;          // sotto il bordo inferiore della nav
+    left: 0;
+    width: $sphere-width;   
+    height: $size;
+    pointer-events: none;
+    z-index: -1;                 // sotto il contenuto della nav
+
+    border-radius: 30%;          // forma circolare
+
+    // sfera luminosa con bordo morbido
+    background: radial-gradient(
+    circle,
+    rgba($color, 0.95) 5%,   // centro molto luminoso
+    rgba($color, 0.5) 15%,   // alone intermedio
+    rgba($color, 0.0) 55%    // sfuma nel nulla
+    );
+
+    // un po' di blur per renderla più soft
+    filter: blur(4px);
+
+    // la facciamo scorrere orizzontalmente
+    animation: $keyframe-type $duration ease-in-out infinite alternate;
+}
+}
+
+// Applica alla nav
+.nav-with-light {
+    @include sliding-light-spot();
+}
+
+// Keyframes: la pallina si muove da sinistra verso destra e ritorno
+@keyframes nav-light-spot-move {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
+
+//IMAGES ROTATION
+$img-rotation-duration: 2s;
+$img-translation-Z: 15rem;
+$img-perspective-start: 30rem;
+$img-perspective-end: 50rem;
+// mixin che applica una rotazione Y come animazione
+@mixin rotateY-on-hover($duration: 1s, $anim-name: txt-rotateY-pop) {
+    animation: #{$anim-name} $duration ease-in-out forwards;
+}
+
+// l’elemento (immagine) supporta il 3D
+.img-rotateY {
+    transform-style: preserve-3d;
+}
+
+@keyframes img-rotateY-pop {
+0% {
+    transform: perspective($img-perspective-start) rotateY(0deg) translateZ(0);
+}
+50% {
+    transform: perspective($img-perspective-end) rotateY(180deg) translateZ($img-translation-Z);
+}
+100% {
+    transform: perspective($img-perspective-start) rotateY(0deg) translateZ(0);
+}
+}
+
+.img-rotateY:hover {
+    @include rotateY-on-hover($img-rotation-duration, img-rotateY-pop);
+}
+
+
+//TXT ROTATION
+$txt-rotation-duration: 2.5s;
+$txt-translation-Z-start: 30rem;
+$txt-perspective-start: 60rem;
+
+.txt-rotateY{
+transform-style: preserve-3d;
+}
+
+@keyframes txt-rotateY-pop {
+    0% {
+        transform: perspective($txt-perspective-start) rotateY(0deg) translateZ(0);
+    }
+    25% {
+        transform: perspective($txt-perspective-start) rotateY(100deg) translateZ($txt-translation-Z-start);
+    }
+    50% {
+        transform: perspective(none) rotateY(0deg) translateZ(-$txt-translation-Z-start);
+    }
+    100% {
+        transform: perspective(none) rotateY(0deg) translateZ(0);
+    }
+}
+
+.txt-rotateY:hover {
+    @include rotateY-on-hover($txt-rotation-duration, txt-rotateY-pop);
+}
+
+
+//POINT CIRCLE ROTATION
+$circle-rotation-duration: 1s;
+$circle-translation-Z: 1rem;
+$circle-perspective-start: 1rem;
+$circle-perspective-end: 2rem;
+// mixin che applica una rotazione Y come animazione
+@mixin rotateY-on-hover($duration: 1s, $anim-name: circle-rotateY-pop) {
+    animation: #{$anim-name} $duration ease-in-out forwards;
+}
+
+// l’elemento (immagine) supporta il 3D
+.circle-rotateY {
+    transform-style: preserve-3d;
+}
+ 
+@keyframes circle-rotateY-pop {
+  0% {
+      transform: perspective($circle-perspective-start) rotateY(0deg) translateZ(0);
+  }
+  75% {
+      transform: perspective($circle-perspective-end) rotateY(360deg) translateZ($circle-translation-Z);
+  }
+  100% {
+      transform: perspective($circle-perspective-start) rotateY(360deg) translateZ(0);
+  }
+}
+
+.timeline-item:hover::before {
+  @include rotateY-on-hover($circle-rotation-duration, circle-rotateY-pop);
+}
+
+
+/*-----------------------------------------PROGRESS BAR--------------------------------------------*/
+
+$progress-radius: 0.25rem;
+$progress-height: 0.2rem;
+$progress-anim-duration: 2s;
+
+@mixin progress-fill($width-end: 0%){
+  //created a custom properties
+  --width-end: #{$width-end};
+  animation: fill-bar $progress-anim-duration ease-out forwards;
+}
+
+/* anima il width da 0 a 25% senza hover */
+@keyframes fill-bar {
+  from { width: 0% }
+  to   { width: var(--width-end); }
+}
+
+.progress,
+.progress-stacked {
+  --bs-progress-height: #{$progress-height};    
+  --bs-progress-bg: #{$bs-black-0x241d18};         
+  --bs-progress-border-radius: #{$progress-radius};
+  --bs-progress-box-shadow: none; 
+
+  height: var(--bs-progress-height);
+  background-color: var(--bs-progress-bg);
+  border-radius: var(--bs-progress-border-radius);
+}
+
+.progress-bar {
+  --bs-progress-bar-bg: #{$secondary};    /* barra arancione */
+  background-color: var(--bs-progress-bar-bg);
+  width: 0;   /* stato iniziale (width: 0) */ 
+}
+
+$progress-values: (
+  iec-cod:   90%,
+  python:    76%,
+  sql:       67%,
+  js:        62%,
+  htmlcss:   70%,
+  docker:    68%,
+  gitlab:    70%,
+  terraform: 68%
+);
+
+@each $skill, $perc in $progress-values {
+  /* $skill e $perc corrispondono a key e value della struttura $progress-values
+  /* $skill sarà anche il nome della nuova classe creata dinamicamente in base alla key di $progress-values*/
+  .progress-bar.#{$skill} {
+    @include progress-fill($perc);
+  }
+}
+
