@@ -137,35 +137,6 @@ $img-perspective-end: 50rem;
 }
 
 
-//TXT ROTATION
-$txt-rotation-duration: 2.5s;
-$txt-translation-Z-start: 30rem;
-$txt-perspective-start: 60rem;
-
-.txt-rotateY{
-transform-style: preserve-3d;
-}
-
-@keyframes txt-rotateY-pop {
-    0% {
-        transform: perspective($txt-perspective-start) rotateY(0deg) translateZ(0);
-    }
-    25% {
-        transform: perspective($txt-perspective-start) rotateY(100deg) translateZ($txt-translation-Z-start);
-    }
-    50% {
-        transform: perspective(none) rotateY(0deg) translateZ(-$txt-translation-Z-start);
-    }
-    100% {
-        transform: perspective(none) rotateY(0deg) translateZ(0);
-    }
-}
-
-.txt-rotateY:hover {
-    @include rotateY-on-hover($txt-rotation-duration, txt-rotateY-pop);
-}
-
-
 //POINT CIRCLE ROTATION
 $circle-rotation-duration: 1s;
 $circle-translation-Z: 1rem;
