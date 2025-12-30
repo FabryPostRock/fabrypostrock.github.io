@@ -1,5 +1,10 @@
 @import "colors";
 /*----------------------------------------------------------- ANIMATIONS ----------------------------------------------------*/
+.img-fluid.rounded-circle:hover{
+    border: 2px solid transparent;
+    border-color: #{$primary};
+    box-shadow: 0px 0px 3px 3px rgba($primary, 0.5);
+}
 
 .text-hover-slide {
     transition: transform 1.6s ease, letter-spacing 1.6s ease;

@@ -1,0 +1,15 @@
+Lead_TEST_MEX1.csv
+**/*.log
+**/*.pyc
+**/*.tar
+**/*.env
+**/*.csv
+**/*.txt
+**/*.xlsx
+
+
+
+# Folders
+/_pycache__/
+**/node_modules/
+**/bootstrap/
