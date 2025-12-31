@@ -3,22 +3,20 @@
     <head>
         <title>Dalla tecnologia alla Medicina Cinese | Fabrizio De Masi</title>
         <!--utilizzato per fornire una breve descrizione del contenuto della pagina web. Questa descrizione è spesso utilizzata dai motori di ricerca nei 
-            risultati di ricerca per dare agli utenti un'idea del contenuto della pagina.-->
-        <meta name="description" content="Un viaggio nel mondo della creatività che mi ha portato all'uomo e padre che sono oggi.">
+        risultati di ricerca per dare agli utenti un'idea del contenuto della pagina.
+        Mettere il nome all’inizio del title aiuta quando qualcuno cerca “Fabrizio De Masi”.-->
+        <meta name="description" content="Profilo di Fabrizio De Masi: ingegnere, data & AI enthusiast, appassionato di Tai Chi e Medicina Cinese. Dal Machine Learning alle pratiche olistiche, un percorso di trasformazione personale e professionale.">
         <meta charset="UTF-8">
         <meta name="author" content="Fabrizio De Masi">
         <!--Essenziale per il design responsivo, assicura che la pagina sia visualizzata correttamente su dispositivi mobili.-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!---Indica ai motori di ricerca se devono indicizzare la pagina e seguire i link presenti.-->
-        <meta name="robots" content="index">
+        <!--- 
+        index = la pagina può finire in SERP
+        follow = i link al suo interno possono essere seguiti e considerati da Google.-->
+        <meta name="robots" content="index, follow">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
-        <!--Import Google Icon Font more customizable
-        Supports variable font axes:
-        opsz: optical size (20–48)
-        wght: weight (100–700)
-        FILL: 0 (outline) or 1 (filled)
-        GRAD: grade (-50 to 200)        
-        -->
+        <!--Serve a dire a Google qual è l’URL “ufficiale” della pagina (utile anche su GitHub Pages):-->
+        <link rel="canonical" href="https://fabrypostrock.github.io/">
         <meta name="keywords" content="Fabrizio De Masi, medicina cinese, Tai Chi, Machine Learning, trasformazione personale, creatività, tecnologia e benessere">
         <!-- Open Graph per social sharing (Facebook, LinkedIn ecc.) -->
         <meta property="og:title" content="Dalla tecnologia alla Medicina Cinese | Fabrizio De Masi">
@@ -26,7 +24,36 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://fabrypostrock.github.io/"> 
         <meta property="og:image" content="https://fabrypostrock.github.io/assets/img/logo_fabri.jpg">
+        <!--L'aggiunta di dati strutturati può attivare risultati di ricerca più coinvolgenti per gli utenti, che potrebbero essere così incoraggiati 
+        a interagire maggiormente con il tuo sito web, chiamati risultati avanzati.-->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ProfilePage",
+              "name": "Fabrizio De Masi",
+              "url": "https://fabrypostrock.github.io/",
+              "mainEntity": {
+                "@type": "Person",
+                "name": "Fabrizio De Masi",
+                "jobTitle": "Data & AI Engineer",
+                "description": "Dal mondo dell'automazione industriale e del Machine Learning alla pratica del Tai Chi e allo studio della Medicina Cinese.",
+                "image": "https://fabrypostrock.github.io/assets/img/logo_fabri.png",
+                "sameAs": [
+                  "https://github.com/FabryPostRock",
+                  "https://www.linkedin.com/in/fabrizio-de-masi-55016088/",
+                  "https://www.instagram.com/fabridemasi/"
+                ]
+              }
+            }
+        </script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--Import Google Icon Font more customizable
+        Supports variable font axes:
+        opsz: optical size (20–48)
+        wght: weight (100–700)
+        FILL: 0 (outline) or 1 (filled)
+        GRAD: grade (-50 to 200)        
+        -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="assets/fonts/fonts.css" rel="stylesheet">
         <link href="assets/css/scss/main.css" rel="stylesheet">
@@ -73,7 +100,7 @@
         </div>
         <div class="container">
             <div class="mt-7 mb-5">
-                <h1 class="text-center slide-l-h1 black-0x241d18 text-hover-slide ">La vita insegna a non smettere mai di scalare..</h1>   
+                <h1 class="text-center slide-l-h1 fw-semibold black-0x241d18">Come la curiosità mi ha portato dal Machine Learning alla Medicina Cinese</h1>   
             </div>
             <div class="row justify-content-center mx-4 mt-2 mb-5">
                 <div class="col-md-8 img-rotateY">
@@ -83,20 +110,24 @@
         </div>
         <section class="container py-4">
             <div class="row justify-content-center">
-                <div class="col-md-10 text-justify fs-5 first-letter">
-                    Sin da bamabino la curiosità mi ha sempre pervaso e circondato. Mi piaceva osservare mio padre mentre aggiustava qualsiasi cosa ma...amavo di più utilizzare i suoi attrezzi sempre ordinati e che puntualmente mettevo in disordine 
+                <div class="col-md-10 text-justify fs-5">
+                    <h2 class="mt-4 mb-3">Dall’infanzia curiosa agli studi di ingegneria elettronica</h2>
+                    <p class="first-letter">Sin da bamabino la curiosità mi ha sempre pervaso e circondato. Mi piaceva osservare mio padre mentre aggiustava qualsiasi cosa ma...amavo di più utilizzare i suoi attrezzi sempre ordinati e che puntualmente mettevo in disordine 
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#241d18">
                     <path d="M320-480v80q0 66 47 113t113 47q66 0 113-47t47-113v-80H320Zm160 180q-42 0-71-29t-29-71v-20h200v20q0 42-29 71t-71 29ZM340-680q-38 0-67.5 27.5T231-577l58 14q6-26 20-41.5t31-15.5q17 0 31 15.5t20 41.5l58-14q-12-48-41.5-75.5T340-680Zm280 0q-38 0-67.5 27.5T511-577l58 14q6-26 20-41.5t31-15.5q17 0 31 15.5t20 41.5l58-14q-12-48-41.5-75.5T620-680ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>.</br></br>
-                    Le materie che adoravo di più a scuola erano <b>scienze e matematica</b>. Mi davano grande soddisfazione. Ricordo che ero in competizione con i compagni per chi prendeva il voto più alto ma non l'ho mai associata a frustrazione, mi ha 
+                    Le materie che adoravo di più a scuola erano <strong>scienze e matematica</strong>. Mi davano grande soddisfazione. Ricordo che ero in competizione con i compagni per chi prendeva il voto più alto ma non l'ho mai associata a frustrazione, mi ha 
                     sempre spinto a dare il meglio.</br></br>
-                    Affrontare <b>ingegneria elettronica all'Università di Pavia</b>, è stato un viaggio traumatico inizialmente ma che mi ha forzato a diventare responsabile. L'<b>esperienza Erasmus</b> nell'ultimo anno di magistrale è stata davvero qualcosa 
-                    d'<b>incredibile</b> e che consiglio a tutti gli studenti universitari d'intraprendere. 
-                    Non è assolutamente una perdita di tempo, soprattutto perchè vivi in un contesto internazionale ed impari a relazionarti con le persone. </br></br> Dove me ne sono andato?</br></br>Non indovinerete mai. Non volevo andare in Spagna perchè sapevo che avrei trovato 
-                    solo italiani. Volevo scoprire e vivere una cultura diversa dalla mia.</br></br>Così <b>ho scelto Opole</b>, in Polonia o meglio, visto che ero l'unico disponibile 
+                    Affrontare <strong>ingegneria elettronica all'Università di Pavia</strong>, è stato un viaggio traumatico inizialmente ma che mi ha forzato a diventare responsabile. L'<strong>esperienza Erasmus</strong> nell'ultimo anno di magistrale è stata davvero qualcosa 
+                    d'<strong>incredibile</strong> e che consiglio a tutti gli studenti universitari d'intraprendere. 
+                    Non è assolutamente una perdita di tempo, soprattutto perchè vivi in un contesto internazionale ed impari a relazionarti con le persone. </br></br> Dove me ne sono andato?</br></br></p>
+                    <h2 class="mt-5 mb-3">L’esperienza Erasmus in Polonia che mi ha cambiato la vita</h2>
+                    <p class="first-letter">
+                    Non indovinerete mai. Non volevo andare in Spagna perchè sapevo che avrei trovato 
+                    solo italiani. Volevo scoprire e vivere una cultura diversa dalla mia.</br></br>Così <strong>ho scelto Opole</strong>, in Polonia o meglio, visto che ero l'unico disponibile 
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#241d18">
                     <path d="M320-480v80q0 66 47 113t113 47q66 0 113-47t47-113v-80H320Zm160 180q-42 0-71-29t-29-71v-20h200v20q0 42-29 71t-71 29ZM340-680q-38 0-67.5 27.5T231-577l58 14q6-26 20-41.5t31-15.5q17 0 31 15.5t20 41.5l58-14q-12-48-41.5-75.5T340-680Zm280 0q-38 0-67.5 27.5T511-577l58 14q6-26 20-41.5t31-15.5q17 0 31 15.5t20 41.5l58-14q-12-48-41.5-75.5T620-680ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
                      ci sono andato. Quando avrei avuto un'altra occasione per andarci? 
-                    Ti dirò, non è stato facile inizialmente soprattutto per l'impatto con la lingua ma dalle immagini sotto direi che me la sono cavata piuttosto bene.
+                    Ti dirò, non è stato facile inizialmente soprattutto per l'impatto con la lingua ma dalle immagini sotto direi che me la sono cavata piuttosto bene.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -130,16 +161,17 @@
 
         <section class="container">
             <div class="row justify-content-center mt-5">
-                <div class="col-md-10 text-justify fs-5 first-letter">
-                    Poi è arrivato l'impatto con il mondo del lavoro. Ed è stato un impatto poco divertente. Da neo-laureato in ingegneria <b>mi sono ritrovato ad inseguire lavori che non volevo fare</b> e ad accettare 
-                    la frustrazione di ricevere silenzi anzichè feedback costruttivi post colloquio. Mi sono scontrato con la dura realtà. E <b>mi sono adattato.</b></br></br>
-                    Per circa 10 anni ho lavorato in ambito industriale nello sviluppo software. Poi è arrivato il COVID che mi ha dato il tempo di <b>ripensare a quello che volevo fare nella vita.</b></br></br>
+                <div class="col-md-10 text-justify fs-5">
+                    <h2 class="mt-5 mb-3">Dallo sconforto alla rinascita con la scoperta del Machine Learning</h2>
+                    <p class="first-letter">Poi è arrivato l'impatto con il mondo del lavoro. Ed è stato un impatto poco divertente. Da neo-laureato in ingegneria <strong>mi sono ritrovato ad inseguire lavori che non volevo fare</strong> e ad accettare 
+                    la frustrazione di ricevere silenzi anzichè feedback costruttivi post colloquio. Mi sono scontrato con la dura realtà. E <strong>mi sono adattato.</strong></br></br>
+                    Per circa 10 anni ho lavorato in ambito industriale nello sviluppo software. Poi è arrivato il COVID che mi ha dato il tempo di <strong>ripensare a quello che volevo fare nella vita.</strong></br></br>
                     L'AI stava iniziando a prendere piede in modo più massiccio e m'incuriosiva molto essendo un amante della matematica.  
-                    </br></br>  <b>Ho iniziato a studiare le reti neurali</b> con PyTorch grazie ad un libro consigliato da un amico. Sono partito qualche step in là, ero troppo gasato.
-                    Ho capito che la mia strada era quella, così ho iniziato a frequentare corsi pratici su <b>Udemy</b>, <b>Start2Impact</b> ed ho anche completato un corso online dell'<b>MIT</b> (Massuchussetts Institute of Technology). 
+                    </br></br>  <strong>Ho iniziato a studiare le reti neurali</strong> con PyTorch grazie ad un libro consigliato da un amico. Sono partito qualche step in là, ero troppo gasato.
+                    Ho capito che la mia strada era quella, così ho iniziato a frequentare corsi pratici su <strong>Udemy</strong>, <strong>Start2Impact</strong> ed ho anche completato un corso online dell'<strong>MIT</strong> (Massuchussetts Institute of Technology). 
                     Kaggle è diventato il mio migliore amico. 
                     </br></br>
-                    Ah dimenticavo un dettaglio non trascurabile : <b>all'età di 29 anni son diventato papà.</b> Un scricciolo che nel 2014 pesava 4.3Kg alla nascita e ora ha 11 anni.
+                    Ah dimenticavo un dettaglio non trascurabile : <strong>all'età di 29 anni son diventato papà.</strong> Uno scricciolo che nel 2014 pesava 4.3Kg alla nascita e ora ha 11 anni.</p>
 
                 </div>
                 <div class="col-12" >
@@ -163,15 +195,16 @@
         <div  class="container-fluid py-2 h-0"  ></div>
         <section class="container">
             <div class="row justify-content-center mt-5">
-                <div class="col-md-10 text-justify fs-5 first-letter"> 
-                    Diventare padre è stato ciò che forse ha fatto emergere in modo sempre più prepotente chi volevo diventare. Ho potuto comprendere quanto tempo della mia vita avessi sprecato ed iniziare ad <b>inseguire che ciò che veramente 
-                    fosse importante per me.</b> Ciò che ha risvegliato la mia voglia di avere un impatto nel mondo è stato un <b>corso di Medicina Cinese</b> che mi ha fatto realizzare la mancanza di una <b>cartella sanitaria informatizzata</b> secondo 
+                <div class="col-md-10 text-justify fs-5">
+                    <h2 class="mt-5 mb-3">Diventare papà e scoprire la Medicina Cinese</h2> 
+                    <p class="first-letter">Diventare padre è stato ciò che forse ha fatto emergere in modo sempre più prepotente chi volevo diventare. Ho potuto comprendere quanto tempo della mia vita avessi sprecato ed iniziare ad <strong>inseguire che ciò che veramente 
+                    fosse importante per me.</strong> Ciò che ha risvegliato la mia voglia di avere un impatto nel mondo è stato un <strong>corso di Medicina Cinese</strong> che mi ha fatto realizzare la mancanza di una <strong>cartella sanitaria informatizzata</strong> secondo 
                     i principi di Medicina Cinese.</br></br>
                     Da allora sono trascorsi 3 anni in cui ho imparato molto in ambiti che erano al di fuori del mondo del software ma che ogni giorno mi permettono di diventare una persona
                     capace di affrontare la vita con più strumenti.
                     Quello che vedi sotto è il mio compagno di viaggio da più di 2 anni. Tommaso Guido, un infermiere appassionato di Medicina Cinese.
                     Il nostro obiettivo? <u>Aiutare le persone ad essere più consapevoli ed a trattarsi in modo naturale.</u></br></br>
-                    Sarà un lungo ed emozionante viaggio.
+                    Sarà un lungo ed emozionante viaggio.</p>
 
                 </div>
                 <div class="col-12" >

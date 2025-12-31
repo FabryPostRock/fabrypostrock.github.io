@@ -6,16 +6,6 @@
     box-shadow: 0px 0px 3px 3px rgba($primary, 0.5);
 }
 
-.text-hover-slide {
-    transition: transform 1.6s ease, letter-spacing 1.6s ease;
-}
-  
-.text-hover-slide:hover {
-    transform: translateX(0.35rem) scaleX(1.2) scaleY(1.2);
-    letter-spacing: 0.4em;
-}
-
-
 $slide-l-start-main-img: -500px;
 $slide-l-start-h1: -200px;
 $slide-duration: 1s;

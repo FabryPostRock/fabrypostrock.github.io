@@ -6,6 +6,7 @@ Lead_TEST_MEX1.csv
 **/*.csv
 **/*.txt
 **/*.xlsx
+**/*.css.map
 
 
 

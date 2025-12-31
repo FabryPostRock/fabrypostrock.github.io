@@ -17,19 +17,6 @@
           box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
 
-.text-hover-slide {
-  -webkit-transition: letter-spacing 1.6s ease, -webkit-transform 1.6s ease;
-  transition: letter-spacing 1.6s ease, -webkit-transform 1.6s ease;
-  transition: transform 1.6s ease, letter-spacing 1.6s ease;
-  transition: transform 1.6s ease, letter-spacing 1.6s ease, -webkit-transform 1.6s ease;
-}
-
-.text-hover-slide:hover {
-  -webkit-transform: translateX(0.35rem) scaleX(1.2) scaleY(1.2);
-          transform: translateX(0.35rem) scaleX(1.2) scaleY(1.2);
-  letter-spacing: 0.4em;
-}
-
 .slide-l-h1 {
   /* Animazione: l'immagine parte da dx o sx e fa uno slide in posizione */
   opacity: 0;
