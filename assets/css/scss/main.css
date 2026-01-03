@@ -14212,6 +14212,10 @@ fieldset:disabled .btn {
   text-align: justify;
 }
 
+strong {
+  font-weight: 900;
+}
+
 .first-letter::first-letter {
   font-size: 200%;
   font-weight: 400;

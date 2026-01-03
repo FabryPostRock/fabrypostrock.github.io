@@ -16,6 +16,10 @@
     text-align: justify; 
 }
 
+strong {
+    font-weight: 900; // o il valore che vuoi
+}
+
 .first-letter::first-letter{
     font-size:200%;
     font-weight:400;
