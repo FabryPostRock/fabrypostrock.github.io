@@ -177,7 +177,7 @@ strong {
     }
 } 
 
-/* Tablet Styles */
+// sm-md
 @media only screen and (min-width: 579px) and (max-width: 992px) {
     .mt-md-lg-9 {
         margin-top: ($spacer * 15);
@@ -188,6 +188,21 @@ strong {
     }
 }
 
+// lg-xxl
+@media only screen and (min-width: 993px) and (max-width: 2048px) {
+    .ms-lg-xl-9 {
+        margin-left: ($spacer * 15) !important;
+    }
+    .ms-lg-xl-8 {
+        margin-left: ($spacer * 12) !important;
+    }
+    .ms-lg-xl-7 {
+        margin-left: ($spacer * 9) !important;
+    }
+ 
+}
+
+// sm-xxl
 @media only screen and (min-width: 579px) and (max-width: 2048px) {
     .w-25-lg {
         width: 25% !important;

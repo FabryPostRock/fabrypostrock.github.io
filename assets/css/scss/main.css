@@ -14394,13 +14394,24 @@ strong {
   }
 }
 
-/* Tablet Styles */
 @media only screen and (min-width: 579px) and (max-width: 992px) {
   .mt-md-lg-9 {
     margin-top: 15rem;
   }
   .mt-md-lg-8 {
     margin-top: 12rem;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 2048px) {
+  .ms-lg-xl-9 {
+    margin-left: 15rem !important;
+  }
+  .ms-lg-xl-8 {
+    margin-left: 12rem !important;
+  }
+  .ms-lg-xl-7 {
+    margin-left: 9rem !important;
   }
 }
 
