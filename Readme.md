@@ -117,3 +117,15 @@ Pagina per entrare in contatto in modo strutturato:
 │       ├── my-son.jpg
 │       └── fabri-tommi.png
 └── README.md
+```
+## License
+
+This repository is public for portfolio, review, and educational visibility only.
+
+The project is **not open source** and is not licensed for free reuse.
+
+Unless otherwise stated, the content of this repository is distributed under a custom non-commercial license. You may view, clone, or fork the repository through GitHub for personal, educational, evaluation, or code-review purposes only.
+
+Commercial use, redistribution, publication, reuse of images, reuse of personal media, reuse of visual assets, derivative works, and AI training/dataset use are not allowed without prior written permission.
+
+See [`LICENSE.md`](./LICENSE.md) for details.
